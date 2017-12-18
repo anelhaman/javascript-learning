@@ -4,15 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+
 </head>
 <body>
+  <title>Document</title>
+  <style >
+    a{
+      text-decoration: none;
+    }
+    .hidden{
+      display: none;
+    }
+    .show{
+      display: inline;
+    }
+  </style>
 
   <p id="sayHello"></p>
 
 
   <script type="text/javascript" src="script.js">
   </script>
+  <a href="Javascript:void(0)" onClick="alert('Hello')">Say Hello</a><br>
+  <a href="Javascript:void(0)" onClick='openAlert("Hi How are you?")'>Say Something</a><br>
+  <a href="Javascript:void(0)"
+  onmouseover="this.style.color='green'"
+  onmouseout="this.style.color='#000'"
+  ondblclick="this.text='You just double click me!'"
+  onmousedown="this.text='Don\'t Press hard'"
+  onmouseup="this.text='Thank you'"
+  >Try over mouse on me</a><br>
 
+  <input
+  type="text"
+  id="randInput"
+  onchange="let dataEntered = document.getElementById('randInput').value; alert('You typed :'+dataEntered); "><br>
+
+  <form action="#" id="sampFrom" >
+    <input id='charInput' type="text">
+    <p id="keyData">Key Data Here</p>
+
+    <input type="submit" value="Submit"><br/>
+    <input type="reset" value="Reset"><br/>
+
+  </form><br>
+
+  <img src="./public/logo.png" alt="image" id="logo"><br/>
+  <button id="logoButton">Get Logo</button><br/>
+  <input type="text" id="mouseInput" size="30"><br>
+  Mouse X: <input type="text" id="mouseX"><br/ >
+  Mouse Y: <input type="text" id="mouseY"><br/ >
+  <button id="clearInputs">Clear !</button>
 </body>
 </html>
